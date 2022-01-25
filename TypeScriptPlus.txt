@@ -1,0 +1,13 @@
+Static Typing
+정적 타이핑
+타입을 선언하고 선언한 타입에 맞는 값만이 할당 또는 반환되어야 한다는 것.
+
+Type Inference
+타입 추론
+ex) 
+// ts
+let a = 5;
+a = 'Hello';
+-> a에 빨간줄 에러 뜸. let a: number 메세지 Type 'Hello' is not assignable to type 'number'.
+
+=> 타입스크립트에서는 타입 표기가 없는 경우 우리가 쓴 코드를 읽고 분석하여 타입을 유추해낼 수 있다.
