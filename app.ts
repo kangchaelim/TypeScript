@@ -28,14 +28,19 @@ let courseCompleted:boolean = false;
 //     return null;
 // }
 
-// < TypeScript Interface >
+// < TypeScript Interface > // < TypeScript Enum >
+enum GenderType {
+    Male = 'male',
+    Female = 'female',
+    GenderNeutral = 'genderNeutral',
+}
 
 interface Student {
     readonly studentID:number;
     studentName:string;
     age?:number;
     // 물음표를 붙인 프로퍼티는 있어도 되고 없어도됨
-    gender:string;
+    gender:GenderType; // enum을 이용해 Male, Female 두 가지 값만 들어가도록 설정
     subject:string;
     courseCompleted:boolean;
     // addComment (comment:string): string;
@@ -48,7 +53,7 @@ function getStudentDetails(studentID:number):Student
     studentID: 123456,
     studentName: "Janet Jackson",
     // age: 26, 없어도 오류가 뜨지 않음
-    gender: "male",
+    gender: GenderType.Male,
     subject: "JavaScript",
     courseCompleted: false,
     }
@@ -62,8 +67,10 @@ let student1 = {
     studentID: 123456,
     studentName: "Janet Jackson",
     age: 30,
-    gender: "male",
+    gender: GenderType.Male,
     subject: "JavaScript",
     courseCompleted: false,
 }
 saveStudentDetails(student1);
+
+
